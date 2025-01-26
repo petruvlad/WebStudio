@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Web Studio Projects</title>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <!-- Logo vizibil permanent -->
+        <a class="nav-list-logo" href="index.html"><span>Web</span>Studio</a>
+
+        <!-- Buton Burger -->
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Meniul Burger (linkuri și contacte) -->
+        <div class="menu">
+            <ul class="nav-list">
+                <li><a href="studio.html">Studio</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+            <ul class="nav-contacts">
+                <li>
+                    <a href="mailto:info@devstudio.com">
+                        <i class="fas fa-envelope"></i> info@devstudio.com
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+12127724150">
+                        <i class="fas fa-phone"></i> +1 212-772-4150
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+
+<main>
+   <div class="hero">
+  <h1>EFFECTIVE SOLUTIONS FOR <br> YOUR BUSINESS</h1>
+  <button class="hero-btn" id="open-modal-btn">Request our service</button>
+
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Închide fereastra">&times;</button>
+      <form class="order-form">
+        <h2>Request service</h2>
+
+        <!-- Nume -->
+          <label for="name">
+                <i class="fas fa-user"></i> Name
+            </label>
+        <input type="text" id="name" name="name" placeholder="Introdu numele tău" required>
+
+        <!-- Email -->
+        <label for="email">
+                <i class="fas fa-envelope"></i> Email
+            </label>
+        <input type="email" id="email" name="email" placeholder="Introdu email-ul tău" required>
+
+        <!-- Telefon -->
+       <label for="phone">
+                <i class="fas fa-phone"></i> Phone
+            </label>
+        <input type="tel" id="phone" name="phone" placeholder="Introdu numărul tău de telefon" required>
+
+        <!-- Comentarii -->
+        <label for="comments">Comentarii</label>
+        <textarea id="comments" name="comments" placeholder="Adaugă comentarii"></textarea>
+
+        <!-- Trimite -->
+        <button type="submit" class="submit-btn">Trimite</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SVG Sprite pentru butonul de închidere -->
+  <svg style="display: none;">
+    <symbol id="close-icon" viewBox="0 0 24 24">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+</div>
+    <section class="our-skills">
+        <ul class="our-skills-list">
+            <li>
+                <img src="./images/icons/Group1.svg" alt="">
+                <h4>ATTENTION TO DETAILS</h4>
+                <p>
+                    We go into all the details and processes of your business to develop a
+                    customized solution.
+                </p>
+            </li>
+            <li>
+                <img src="./images/icons/Group2.svg" alt="">
+                <h4>PUNCTUALITY</h4>
+                <p>
+                    With us, you can feel safe and secure. An important principle of the
+                    company: respect your time and deadlines.
+                </p>
+            </li>
+            <li>
+                <img src="./images/icons/Group3.svg" alt="">
+                <h4>PLANNING</h4>
+                <p>
+                    You will be able to observe and participate in every phase of solution
+                    development and implementation.
+                </p>
+            </li>
+            <li>
+                <img src="./images/icons/Group4.svg" alt="">
+                <h4>MODERN TECHNOLOGIES</h4>
+                <p>
+                    We use innovative tools to solve assigned tasks. It's time to simplify
+                    work processes.
+                </p>
+            </li>
+        </ul>
+    </section>
+    <section class="what-we-do">
+        <h2>What we do</h2>
+        <ul class="what-we-do-list">
+            <li>
+                <img src="./images/box1.jpg" alt="laptop"  />
+            </li>
+            <li>
+                <img src="./images/box2.jpg" alt="laptop si telefon"  />
+            </li>
+            <li>
+                <img src="./images/box3.jpg" alt="tableta"  />
+            </li>
+        </ul>
+    </section>
+    <section class="our-team">
+        <h2>Our Team</h2>
+        <ul class="our-team-list">
+            <li>
+                <img src="./images/img1.jpg" alt="Product Designer" style="width: 270px; height: 260px;" />
+                <span>Christopher Walker</span>
+                <p>Product Designer</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </li>
+            <li>
+                <img src="./images/img2.jpg" alt="Frontend Developer" style="width: 270px; height: 260px;" />
+                <span>Kylie Evans</span>
+                <p>Frontend Developer</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </li>
+            <li>
+                <img src="./images/img3.jpg" alt="Marketing" style="width: 270px; height: 260px;" />
+                <span>Ryan Harris</span>
+                <p>Marketing</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </li>
+            <li>
+                <img src="./images/img4.jpg" alt="UI Designer" style="width: 270px; height: 260px;" />
+                <span>Tyler Moore</span>
+                <p>UI Designer</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="our-clients">
+        <h2>Regular Clients</h2>
+        <ul class="our-clients-list">
+            <li>
+                <img src="./images/icons/Client1.svg" alt="">
+            </li>
+            <li>
+                <img src="./images/icons/Client2.svg" alt="">
+
+            </li>
+            <li>
+                <img src="./images/icons/Client3.svg" alt="">
+
+            </li>
+            <li>
+                <img src="./images/icons/Client4.svg" alt="">
+            </li>
+            <li>
+                <img src="./images/icons/Client5.svg" alt="">
+            </li>
+            <li>
+                <img src="./images/icons/Client6.svg" alt="">
+            </li>
+        </ul>
+    </section>
+</main>
+<footer class="footer">
+    <ul class="footer-contacts">
+        <li>
+            <a class="nav-list-logo" href="#"><span>Web</span>Studio</a>
+        </li>
+        <li>
+             <address class="address">
+        <span>695 Park Ave, NY 10065, USA</span><br>
+    </address>
+        </li>
+    
+   
+        <li>
+            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+        <li>
+            <a href="tel:+12127724150">+1 212-772-4150</a>
+        </li>
+    </ul>
+
+   <div class="footer-social">
+    <h2>Find Us</h2>
+    <ul class="footer-social-icons">
+        <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn profile">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our GitHub repository">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <span class="sr-only">GitHub</span>
+            </a>
+        </li>
+    </ul>
+</div>
+ <div class="footer-subscribe">
+            <h2>Subscribe to the newsletter</h2>
+            <form action="https://example.com/subscribe" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+     
+ </div>
+
+
+</footer>
+
+
+<script type="module" src="./js/modal.js"></script>
+
+
+
+</body>
+</html>

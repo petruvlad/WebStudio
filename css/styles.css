@@ -1,0 +1,815 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+background: #FFFFFF;
+
+
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+/* Header de bază */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.nav-list-logo {
+    font-family: "Raleway", Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list-logo span {
+    color: #2196F3;
+}
+
+/* Butonul Burger */
+.menu-toggle {
+    display: none; /* Ascuns pe desktop */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Meniul Burger */
+.menu {
+    display: none; /* Ascuns implicit */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu.active {
+    display: flex; /* Afișează meniul când este activ */
+}
+
+.nav-list,
+.nav-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ocupă toată lățimea */
+}
+
+.nav-list li,
+.nav-contacts li {
+    padding: 0.5rem 0;
+}
+
+.nav-list a,
+.nav-contacts a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-contacts a:hover {
+    color: #2196F3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Afișează butonul burger pe mobil */
+    }
+
+    .menu {
+        display: none; /* Ascunde meniul implicit pe mobil */
+    }
+}
+
+/* Hero Section */
+
+.hero {
+  background: url('../images/Img.webp') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Elemente aranjate în coloană */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem; /* Spațiu între titlu și buton */
+}
+
+.hero-btn {
+  background: #2196F3;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16.41px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #333;
+}
+
+.hero-btn:active {
+  background:#fff;
+  color: #333;
+}
+
+.hero-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px #2196F3;
+}
+
+
+/* Our Skills */
+
+.our-skills {
+  background: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite flexibilitatea la dimensiuni mai mici */
+  justify-content: center;
+ gap:1rem;
+}
+
+.our-skills-list li {
+  
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 270px; /* Dimensiune optimizată a elementelor */
+  text-align: center;
+}
+
+.our-skills-list li img {
+  width: 270px; /* Dimensiune optimizată a imaginilor */
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+.our-skills h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+   color: #212121;
+}
+
+.our-skills p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #666; /* Culoare mai subtilă pentru text */
+}
+
+/* What we do */
+.what-we-do {
+  padding: 2rem; /* Spațiu în jurul secțiunii */
+}
+
+.what-we-do h2 {
+  text-align: center; /* Centrează textul pe orizontală */
+  font-size: 2rem; /* Dimensiunea fontului */
+  font-weight: bold; /* Grosime font */
+  margin-bottom: 2rem; /* Spațiu sub titlu */
+  color: #333; /* Culoarea textului */
+}
+
+.what-we-do-list {
+  list-style: none; /* Elimină stilul implicit al listei */
+  padding: 0; /* Elimină padding-ul implicit */
+  display: flex; /* Activează flexbox */
+  flex-wrap: wrap; /* Permite elementelor să se mute pe un nou rând */
+  justify-content: center; /* Centrează elementele pe orizontală */
+  gap: 2rem; /* Spațiu uniform între elemente */
+}
+
+.what-we-do-list li {
+  background: #fff; /* Fundal alb */
+  padding: 1.5rem; /* Spațiu interior */
+  border-radius: 10px; /* Colțuri rotunjite */
+  width: 100%; /* Lățime completă pe dispozitive mici */
+  max-width: 270px; /* Dimensiune fixă pentru carduri */
+  text-align: center; /* Text centrat în card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tranziție pentru hover */
+}
+
+.what-we-do-list li img {
+  width: 100%; /* Imaginile ocupă lățimea cardului */
+  height: 200px; /* Înălțime fixă pentru uniformitate */
+  object-fit: cover; /* Decupează imaginea pentru a umple spațiul */
+  object-position: center; /* Centrează imaginea */
+  border-radius: 8px; /* Colțuri rotunjite pentru imagini */
+}
+
+.what-we-do-list li img:hover {
+  
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .what-we-do-list li {
+    max-width: 45%; /* Carduri mai mici pe ecrane medii */
+  }
+}
+
+@media (max-width: 480px) {
+  .what-we-do-list li {
+    max-width: 100%; /* Cardurile ocupă întreaga lățime */
+  }
+
+  .what-we-do-list {
+    gap: 1rem; /* Spațiu redus între carduri */
+  }
+}
+
+/* Our Team */
+
+.our-team {
+  background: #fff;
+  margin: 0;
+  text-align: center;
+  color: #333;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.our-team h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #212121;
+}
+
+.our-team-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.our-team-list li {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 270px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Umbră pentru adâncime */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-team-list li:hover {
+  transform: translateY(-5px); /* Mică mișcare la hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.our-team-list img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px; /* Colțuri rotunjite pentru imagini */
+}
+
+.our-team-list span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #212121;
+}
+
+.our-team-list p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.our-team .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.our-team .social-icons a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; 
+  background: #f4f4f4; /* Fundal mai neutru pentru iconițe */
+  transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-team .social-icons a:hover {
+  color: #fff; /* Culoarea pictogramei la hover */
+  background: #2196F3; /* Fundal albastru la hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Umbră subtilă la hover */
+  cursor: pointer;
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .our-team-list {
+    gap: 1rem;
+  }
+
+  .our-team-list li {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-team-list {
+    flex-direction: column;
+  }
+
+  .our-team-list li {
+    max-width: 90%; /* Lățime redusă pentru dispozitive mici */
+  }
+}
+
+@media (max-width: 768px) {
+  .our-clients-list li {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+/* Our Clients */
+
+.our-clients {
+  background: #fff;
+  padding: 3rem 0; /* Mai mult padding pentru spațiu suplimentar */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Aranjare verticală a titlului și listei */
+  justify-content: center;
+  align-items: center;
+}
+
+.our-clients h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem; /* Spațiu suplimentar între titlu și lista de clienți */
+  color: #212121;
+}
+
+.our-clients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite rearanjarea pe linii multiple la dimensiuni mai mici */
+  justify-content: center;
+  gap: 2rem; /* Spațiu consistent între elemente */
+}
+
+.our-clients-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px; /* Dimensiune fixă pentru fiecare element */
+  height: 100px;
+}
+
+.our-clients-list li img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Asigură că imaginile se adaptează proporțional */
+  border-radius: 8px; /* Opțional: colțuri ușor rotunjite pentru un aspect mai modern */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.our-clients-list li:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+}
+
+/* Footer */
+
+.footer {
+    background-color:#212121;
+    color:#F5F4FA;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap: 40px;
+  width:100%;
+    margin: 0 auto;
+}
+
+.footer-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.footer-contacts li {
+    margin: 10px 0;
+}
+
+.nav-list-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list-logo span {
+    color: #000;
+}
+.address {
+    font-style: normal;
+}
+
+.footer-contacts a {
+    color:#F5F4FA;
+    text-decoration: none;
+}
+
+.footer-contacts a:hover {
+   color:#2196F3;
+    cursor: pointer;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-icons li {
+    margin: 0 10px;
+}
+
+.footer-social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+    color:#2196F3;
+    cursor: pointer;
+}
+
+.footer form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.footer form input[type="email"] {
+    padding: 8px;
+    margin:0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2F303A;
+}
+
+
+.footer form button {
+    padding: 8px 15px;
+    border: none;
+    background-color:#333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer form button:hover {
+    background-color: #2196F3;
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .our-skills-list, .what-we-do-list, .our-team-list, .our-clients-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+
+/* Stilizare pentru modal */
+.modal {
+  display: none; /* Ascuns implicit */
+  position: fixed;
+  inset: 0; /* Top, bottom, left, right: 0 */
+  background: rgba(0, 0, 0, 0.7); /* Fundal semi-transparent */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex; /* Afișat când aria-hidden este false */
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Buton de închidere */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff); /* Gradient relief */
+  border: 1px solid #ccc; /* Contur subtil */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.9); /* Umbră relief */
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Inversăm gradientul */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.8); /* Efect de adâncire */
+  color: #ff4d4d; /* Schimbăm culoarea la hover */
+}
+
+.close-btn:active {
+  background: linear-gradient(145deg, #e0e0e0, #f8f8f8); /* Fundal apăsat */
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.7); /* Umbră interioară */
+  color: #d11a1a; /* Culoare mai intensă la apăsare */
+}
+
+
+/* Formular */
+.order-form h2 {
+  text-align: center;
+  color: #0056b3;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.order-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 10px 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.order-form input:focus,
+.order-form textarea:focus {
+  border-color: #007bff;
+  background: #eef6ff;
+}
+
+
+/* Buton Trimite cu stil relief */
+.order-form button {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff); /* Gradient relief */
+  border: 1px solid #ccc; /* Contur subtil */
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.9); /* Umbră relief */
+  transition: all 0.3s ease-in-out;
+}
+
+.order-form button:hover {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Inversăm gradientul */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.8); /* Efect de adâncire */
+  color: #007bff; /* Schimbăm culoarea textului */
+}
+
+.order-form button:active {
+  background: linear-gradient(145deg,#2196F3,); /* Fundal apăsat */
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.7); /* Umbră interioară */
+  color: #0056b3; /* Culoare mai intensă la apăsare */
+}
+
+
+/* Stilizare Portfolio */
+
+
+
+/* Buttons Section */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.buttons button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #0056b3;
+}
+
+/* Portfolio Section */
+   .portfolio-projects {
+      padding: 2rem;
+    }
+
+    .portfolio-projects-list {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+ .card {
+  position: relative;
+  width: 370px; /* Dimensiunile cardului */
+  height: 404px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 370px;
+  height: 294px;
+  object-fit: cover;
+}
+
+/* Overlay Styling */
+.overlay {
+  position: absolute;
+  top: 100%; /* Inițial este poziționat în afara cardului */
+  width: 370px;
+  height: 294px;
+  background: rgba(33, 150, 243, 0.9); /* Fundal albastru semi-transparent */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0; /* Ascuns implicit */
+  transition: opacity 400ms ease-in-out, top 400ms ease-in-out; /* Tranziție mai lină */
+}
+
+.card:hover .overlay {
+  opacity: 1; /* Overlay-ul devine vizibil */
+  top: 0; /* Se repoziționează pentru a acoperi întreaga imagine */
+}
+
+
+.menu {
+  display: none; /* Ascuns implicit */
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #333;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu.active {
+  display: flex; /* Afișăm meniul */
+}
+
+.menu-toggle {
+  display: none; /* Ascuns pe desktop */
+  font-size: 1.8rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Afișează butonul burger pe mobil */
+  }
+}
